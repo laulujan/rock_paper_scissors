@@ -24,9 +24,9 @@ function addClassName (id, cName){
    removeClassName('no-display');
    addClassName('img', 'no-display');
    addClassName('play-btn', 'no-display')
-   removeClassName('hidden');
-   removeClassName('hidden');
-   removeClassName('hidden');
+   showDisplay('player-score');
+   showDisplay('computer-score');
+   showDisplay('results');
  }
 
 //get player movement
@@ -46,7 +46,6 @@ function computerMove(arr) {
 function singleRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     tie += 1;
-    showScore('#ties-score', tie);
     showScore('#legend', "It's a tie");
     return "It's a tie";
   } else {
@@ -103,11 +102,11 @@ function game() {
 
 function its_over(player, computer) {
   if (player === 5) {
-    showModal("you're the winner!!");
+    showModal("Congratulations, you're the winner!! 🎉");
   }
 
   if (computer === 5) {
-   showModal("you lose !!");
+   showModal("Sorry, you lost !! 😢");
   }
 }
 
@@ -126,4 +125,14 @@ function showModal(text){
   modalText.textContent = text;
 }
   
-  
+//reload page
+function reload(){
+  location.reload();
+  return false;
+}
+
+//remove Display
+function showDisplay(id){
+  const score= document.getElementById(id);
+  score.style.display = 'block';
+}

@@ -12,10 +12,10 @@
         <h1>Rock Paper Scissors</h1>
       </header>
       <div class="main">
-        <div id="player-score" class="score hidden">
-          <h2>You</h2>
+        <div id="player-score" class="score">
+          <h2>Player</h2>
           <h3>Score</h3>
-          <p id="player-counter"></p>
+          <p class="counter" id="player-counter"></p>
         </div>
         <div class="game">
           <img
@@ -23,34 +23,31 @@
             src="https://thumbs.gfycat.com/WhichDisastrousAmurratsnake-small.gif"
           />
           <div id="moves" class="no-display">
-            <button id="rock" value="rock" onclick="game()">👊</button>
-            <button id="paper" value="paper" onclick="game()">🖐</button>
-            <button id="scissors" value="scissors" onclick="game()">✌</button>
+            <button class="moves" id="rock" value="rock" onclick="game()">👊</button>
+            <button class="moves" id="paper" value="paper" onclick="game()">🖐</button>
+            <button class="moves" id="scissors" value="scissors" onclick="game()"> ✌ </button>
           </div>
         </div>
-        <div id="computer-score" class="score hidden">
+        <div id="computer-score" class="score">
           <h2>Computer</h2>
           <h3>Score</h3>
-          <p id="computer-counter"></p>
+          <p  class="counter" id="computer-counter"></p>
         </div>
       </div>
       <div id="play-btn">
-        <button onclick="play()">Play ▷</button>
+        <button class="start" onclick="play()">Start</button>
       </div>
-      <div class="results hidden">
+      <div id="results">
         <p id="legend"></p>
       </div>
       <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
-          </div>
           <div class="modal-body">
             <p id="modal-text"></p>
           </div>
           <div class="modal-footer">
-            <button id="reload">Play again</button>
+            <button   class="start" id="reload" onclick="reload()">Play again</button>
           </div>
         </div>
       </div>
