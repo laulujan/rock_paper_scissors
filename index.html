@@ -12,22 +12,23 @@
         <h1>Rock Paper Scissors</h1>
       </header>
       <div class="main">
-        <div id ="player-score" class="score hidden">
+        <div id="player-score" class="score hidden">
           <h2>You</h2>
           <h3>Score</h3>
           <p id="player-counter"></p>
         </div>
         <div class="game">
-          <img id="img"
+          <img
+            id="img"
             src="https://thumbs.gfycat.com/WhichDisastrousAmurratsnake-small.gif"
           />
-          <div  id="moves" class="no-display">
+          <div id="moves" class="no-display">
             <button id="rock" value="rock" onclick="game()">👊</button>
             <button id="paper" value="paper" onclick="game()">🖐</button>
-            <button id="scissors" value="scissors" onclick="game()" >✌</button>
+            <button id="scissors" value="scissors" onclick="game()">✌</button>
           </div>
         </div>
-        <div  id ="computer-score" class="score hidden">
+        <div id="computer-score" class="score hidden">
           <h2>Computer</h2>
           <h3>Score</h3>
           <p id="computer-counter"></p>
@@ -38,7 +39,20 @@
       </div>
       <div class="results hidden">
         <p id="legend"></p>
-        <p id="ties-score"></p>
+      </div>
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <p id="modal-text"></p>
+          </div>
+          <div class="modal-footer">
+            <button id="reload">Play again</button>
+          </div>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

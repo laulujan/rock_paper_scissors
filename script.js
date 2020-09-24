@@ -103,11 +103,11 @@ function game() {
 
 function its_over(player, computer) {
   if (player === 5) {
-    newDiv("you're the winner!!");
+    showModal("you're the winner!!");
   }
 
   if (computer === 5) {
-   newDiv("you lose !!");
+   showModal("you lose !!");
   }
 }
 
@@ -118,12 +118,12 @@ function showScore(id, content){
   p.textContent = content;
 }
 
-//function to create new div to show the game results
-function newDiv(text){
-  const main = document.querySelector('.main');
-  const div = document.createElement('div');
-  div.classList.add('game-results');
-  div.textContent = text;
-
-  main.appendChild(div);
+//displays the game results on a modal 
+function showModal(text){
+  const modal = document.getElementById('myModal');
+  modal.style.display = "block"
+  const modalText = document.getElementById('modal-text');
+  modalText.textContent = text;
 }
+  
+  
