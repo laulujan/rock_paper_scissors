@@ -106,7 +106,7 @@ function its_over(player, computer) {
   }
 
   if (computer === 5) {
-   showModal("Sorry, you lost !! 😢");
+   showModal("Sorry, you lost!! 😢");
   }
 }
 
