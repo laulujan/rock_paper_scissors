@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+}
+
+.main {
+    display: flex;
+
+}
+
+.score {
+    width: 25%;
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.no-display {
+    display: none;
+}
