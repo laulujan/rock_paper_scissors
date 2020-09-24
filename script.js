@@ -10,7 +10,7 @@ let win = 0,
 function addClassName (id, cName){
   const elem = document.getElementById(id);
   elem.classList.add(cName)
-  console.log(elem);
+  
 }
 
 //this function removes a class name is used to show elements on the dom
