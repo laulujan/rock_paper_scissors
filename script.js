@@ -32,7 +32,6 @@ function addClassName (id, cName){
 //get player movement
 function playerMove(e){
   const move = e.target.value;
-  console.log(move)
   return move
 }
 
@@ -121,10 +120,10 @@ function showScore(id, content){
 
 //function to create new div to show the game results
 function newDiv(text){
-  const main = document.querySelector("main");
+  const main = document.querySelector('.main');
   const div = document.createElement('div');
   div.classList.add('game-results');
-  div.textContent(text);
+  div.textContent = text;
 
   main.appendChild(div);
 }
